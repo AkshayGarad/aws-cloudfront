@@ -50,3 +50,31 @@ Digital Rights Management (DRM) is a method of restricting access to copyrighted
 For example, you can use CloudFront with AWS Elemental MediaConvert to encode and encrypt your video content, and then use a third-party DRM solution, such as Microsoft PlayReady or Google Widevine, to control access to that content. 
 
 In summary, while CloudFront does not have built-in DRM capabilities, it can be used in conjunction with third-party DRM solutions to protect and control access to digital media content.
+
+## 5.	When to use Amazon Cloudfront?
+Amazon CloudFront is a content delivery network (CDN) provided by Amazon Web Services (AWS) that helps to deliver your website content, videos, APIs, and other web assets to users around the world with low latency, high transfer speeds, and high availability. Here are some scenarios where you might want to use Amazon CloudFront:
+
+1. Accelerating content delivery: If you have a global user base and want to deliver your website content or other assets to them with low latency, you can use CloudFront to cache and serve that content from edge locations that are closer to the user, reducing the time it takes to fetch content from your origin server.
+
+2. Reducing server load: By using CloudFront to serve your content from edge locations, you can reduce the load on your origin server, which can help to improve its performance and reduce costs.
+
+3. Securing content: CloudFront provides several security features that can help to protect your content, including SSL/TLS encryption, access controls, and support for third-party digital rights management (DRM) solutions.
+
+4. Scalability: CloudFront is highly scalable and can handle large amounts of traffic without any additional configuration or management, making it ideal for websites and web applications that experience high traffic volumes.
+
+5. Cost-effective: With CloudFront, you only pay for the data transfer and requests that your users make, which can help to reduce costs compared to running your own content delivery infrastructure.
+
+In summary, you can use Amazon CloudFront to accelerate content delivery, reduce server load, secure content, improve scalability, and reduce costs.
+
+## 6.	How can we disable Cache for CloudFront?
+You can disable caching for Amazon CloudFront in a few different ways, depending on your specific requirements. Here are a few methods you can use:
+
+1. Disable caching for specific objects: You can disable caching for specific objects by adding a query string parameter to the URL of the object. For example, you can add "?nocache" to the end of the URL to indicate that the object should not be cached. This is useful if you have a specific object that you want to prevent from being cached.
+
+2. Set Cache-Control headers: You can set Cache-Control headers in the HTTP response from your origin server to control how CloudFront caches your content. To disable caching, you can set the "Cache-Control: no-cache" or "Cache-Control: max-age=0" header. This will tell CloudFront not to cache the object, or to revalidate it with the origin server on every request.
+
+3. Create a new cache behavior: You can create a new cache behavior in CloudFront that disables caching for a specific path pattern. To do this, go to the CloudFront distribution settings, select "Behaviors", and then click "Create Behavior". In the behavior settings, you can set the "Minimum TTL" to 0 to disable caching for that behavior.
+
+4. Invalidate cached objects: If you want to disable caching for all objects in a CloudFront distribution, you can invalidate the cached objects. This will remove all cached objects from the edge locations, and subsequent requests will go back to the origin server for the latest version of the content.
+
+In summary, you can disable caching for Amazon CloudFront by adding query string parameters to specific objects, setting Cache-Control headers, creating a new cache behavior, or invalidating cached objects.
