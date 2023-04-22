@@ -41,3 +41,12 @@ AWS CloudFront has several uses, including:
 6. Mobile app acceleration: CloudFront can be used to accelerate mobile app performance by caching frequently accessed content, reducing the time it takes for end-users to access content, and improving the user experience.
 
 Overall, AWS CloudFront is a versatile service that can be used to improve the performance, security, and scalability of web applications and content delivery.
+
+## 4. Is Digital Rights Management in built as part of cloudfront ?
+CloudFront is a content delivery network (CDN) provided by Amazon Web Services (AWS), which is designed to accelerate the delivery of web content to users. 
+
+Digital Rights Management (DRM) is a method of restricting access to copyrighted digital media, and it is not a built-in feature of CloudFront. However, CloudFront can work with DRM solutions that are provided by third-party vendors. 
+
+For example, you can use CloudFront with AWS Elemental MediaConvert to encode and encrypt your video content, and then use a third-party DRM solution, such as Microsoft PlayReady or Google Widevine, to control access to that content. 
+
+In summary, while CloudFront does not have built-in DRM capabilities, it can be used in conjunction with third-party DRM solutions to protect and control access to digital media content.
