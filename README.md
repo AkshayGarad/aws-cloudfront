@@ -122,3 +122,13 @@ Amazon CloudFront and Amazon S3 are both services provided by Amazon Web Service
 4. Access control vs content delivery: S3 provides fine-grained access control to data objects, allowing users to set permissions and policies to control who can access and modify the objects. CloudFront provides access control for content delivery by supporting various authentication and authorization methods, such as signed URLs and cookies.
 5. Cost structure: CloudFront charges based on data transfer and requests, whereas S3 charges based on storage, requests, and data transfer. CloudFront is typically more expensive than S3 for content delivery, but it provides better performance and scalability for global audiences.
 In summary, CloudFront is a CDN service that accelerates the delivery of content, while S3 is an object storage service that provides durable and scalable storage for data objects. Both services have their strengths and weaknesses, and they can be used together to provide a complete solution for storing and delivering content.
+
+## 11.	Is CloudFront load balancer?
+No, CloudFront is not a load balancer. It is a content delivery network (CDN) service that distributes content across multiple edge locations to improve the performance and reduce the latency for end-users. 
+
+While both services can be used to improve the performance and scalability of web applications, they serve different purposes and are used in different scenarios. Load balancers are used to distribute incoming traffic across multiple instances or servers, to improve the availability, scalability, and reliability of the application. Load balancers can route traffic based on various algorithms, such as round-robin, least connections, and IP hash, and they can detect and handle failures and traffic spikes.
+
+On the other hand, CloudFront is used to distribute content across multiple edge locations, to reduce the latency and improve the performance of content delivery. CloudFront caches content at edge locations and serves it from the nearest location to the end-user, reducing the distance and time required to fetch the content from the origin server. CloudFront supports various caching policies, behaviors, and features, such as TTLs, query string parameters, cookies, signed URLs, and geo-restriction.
+
+In summary, while both CloudFront and load balancers are used to improve the performance and scalability of web applications, they serve different purposes and are used in different scenarios. CloudFront is a CDN service that accelerates content delivery, while load balancers are used to distribute traffic across multiple instances or servers.
+
