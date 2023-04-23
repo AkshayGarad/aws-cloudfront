@@ -132,3 +132,8 @@ On the other hand, CloudFront is used to distribute content across multiple edge
 
 In summary, while both CloudFront and load balancers are used to improve the performance and scalability of web applications, they serve different purposes and are used in different scenarios. CloudFront is a CDN service that accelerates content delivery, while load balancers are used to distribute traffic across multiple instances or servers.
 
+## 12.	What is origin in CloudFront?
+In Amazon CloudFront, an origin refers to the source of the content that CloudFront delivers to end-users. The origin can be an Amazon S3 bucket, an EC2 instance, a Load Balancer, or any other HTTP server that can serve the content.
+When a user requests content through CloudFront, CloudFront first checks if the content is available at one of its edge locations. If the content is not available, CloudFront forwards the request to the origin server to fetch the content. CloudFront can retrieve content from multiple origins, and it can also cache the content at the edge locations for future requests.
+An origin in CloudFront can be of two types: S3 origin or custom origin. An S3 origin is an S3 bucket that contains the content to be served, while a custom origin is any other HTTP server that can serve the content. CloudFront supports various customization options for origins, such as setting custom headers, modifying requests and responses, and configuring security and access controls.
+In summary, the origin in CloudFront is the source of the content that CloudFront delivers to end-users. It can be an S3 bucket or any other HTTP server, and it can be customized with various settings and options.
