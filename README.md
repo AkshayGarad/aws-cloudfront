@@ -78,3 +78,23 @@ You can disable caching for Amazon CloudFront in a few different ways, depending
 4. Invalidate cached objects: If you want to disable caching for all objects in a CloudFront distribution, you can invalidate the cached objects. This will remove all cached objects from the edge locations, and subsequent requests will go back to the origin server for the latest version of the content.
 
 In summary, you can disable caching for Amazon CloudFront by adding query string parameters to specific objects, setting Cache-Control headers, creating a new cache behavior, or invalidating cached objects.
+
+## 7.	How can I update files on Amazon’s CDN?
+To update files on Amazon's CDN (CloudFront), you need to follow these steps:
+
+1. Upload the new version of the file(s) to your origin server, such as Amazon S3, where your CloudFront distribution is configured to fetch content from.
+2. Optionally, you can change the name or path of the file to avoid any conflicts with the previous version of the file.
+3. Invalidate the previous version of the file in CloudFront by creating an invalidation request.
+
+To create an invalidation request:
+
+1. Sign in to the AWS Management Console and navigate to the CloudFront console.
+2. Click on the distribution for which you want to invalidate files.
+3. Click on the "Invalidations" tab.
+4. Click on the "Create Invalidation" button.
+5. Enter the path or paths of the files that you want to invalidate, using the following format:
+    - /path/to/file.ext
+    - /path/to/directory/*
+6. Click the "Create Invalidation" button to submit your request.
+
+Note that invalidation requests can take some time to process, and there may be a delay before the new version of your files is propagated to all CloudFront edge locations. Additionally, invalidation requests incur charges, so it's important to use them judiciously.
