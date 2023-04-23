@@ -166,3 +166,8 @@ To use Amazon EC2 with Amazon CloudFront, you need to configure CloudFront to us
 6. Update your DNS records: Update your DNS records to point to the CloudFront distribution.
 Once you complete these steps, CloudFront will start distributing the content from your EC2 instances to end-users around the world, accelerating and improving the performance of content delivery. CloudFront can also cache the content at edge locations closer to the end-users, reducing the latency and improving the performance of content delivery.
 In summary, to use EC2 with CloudFront, you need to configure CloudFront to use your EC2 instances as the origin server, create a CloudFront distribution that uses the origin server group, and update your DNS records to point to the CloudFront distribution.
+
+## 17.	How long is CloudFront cache? 
+The length of time that CloudFront caches content can be configured by the user. By default, CloudFront will cache content for a maximum of 24 hours. However, this can be configured to be shorter or longer depending on the user's needs. 
+When configuring CloudFront, the user can set a value for the "Time To Live" (TTL) for each cacheable object. The TTL represents the length of time that CloudFront should cache the object before requesting a fresh copy from the origin server. The TTL can be set to a value between 0 and 365 days.
+Additionally, CloudFront supports invalidation, which allows the user to force CloudFront to fetch a fresh copy of a specific object from the origin server, regardless of the TTL setting. This can be useful if the user needs to update content before the TTL expires.
