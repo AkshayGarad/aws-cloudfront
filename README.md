@@ -98,3 +98,9 @@ To create an invalidation request:
 6. Click the "Create Invalidation" button to submit your request.
 
 Note that invalidation requests can take some time to process, and there may be a delay before the new version of your files is propagated to all CloudFront edge locations. Additionally, invalidation requests incur charges, so it's important to use them judiciously.
+
+## 8.	What are 2 main components of CloudFront?
+The two main components of Amazon CloudFront are:
+1. Distribution: A distribution is the main configuration object in CloudFront, which represents a set of edge locations where content is cached and served from. It is created for a specific origin server, such as Amazon S3, EC2 instances, or an HTTP server running outside of AWS. A distribution can have one or more cache behaviors, which specify how CloudFront should handle incoming requests for different URLs.
+2. Edge Locations: An edge location is a physical location where CloudFront caches content. Each edge location acts as a gateway between the users and the origin server, providing low-latency access to the content. CloudFront uses a global network of edge locations that are spread across multiple continents to ensure that the content is delivered from the nearest location to the user, minimizing the latency and improving the performance. 
+When a user requests a file from the CloudFront distribution, the request is routed to the nearest edge location. If the file is not already cached at that edge location, CloudFront fetches the file from the origin server, caches it at the edge location, and serves it to the user. If the file is already cached at the edge location and it has not expired, CloudFront serves the file directly from the cache, without contacting the origin server.
