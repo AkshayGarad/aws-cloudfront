@@ -155,3 +155,14 @@ Yes, you can use Amazon CloudFront with Amazon EC2 instances. CloudFront can acc
 To use CloudFront with EC2, you need to configure CloudFront to use your EC2 instances as the origin server. You can create an origin server group in CloudFront that includes one or more EC2 instances, and then configure CloudFront to distribute the content from this origin server group to end-users.
 CloudFront can also cache the content served by your EC2 instances at edge locations closer to the end-users, reducing the latency and improving the performance of content delivery. CloudFront supports various caching policies and features to optimize content delivery, such as TTLs, query string parameters, cookies, signed URLs, and geo-restriction.
 In summary, you can use CloudFront with EC2 to improve the performance, availability, and scalability of your applications by accelerating and distributing the content served by your EC2 instances to end-users around the world.
+
+## 16.	How do I use EC2 with CloudFront?
+To use Amazon EC2 with Amazon CloudFront, you need to configure CloudFront to use your EC2 instances as the origin server. Here are the general steps to set this up:
+1. Launch EC2 instances: Launch one or more EC2 instances in the AWS region of your choice. Make sure that the instances are configured to serve the content you want to distribute through CloudFront.
+2. Create a Security Group: Create a security group that allows inbound traffic on the ports used by your application, and allow access from the CloudFront IP ranges.
+3. Configure EC2 instances: Configure your EC2 instances to allow traffic from the CloudFront IP ranges and to use the security group you created in the previous step.
+4. Create an origin server group: In the CloudFront console, create an origin server group that includes the IP addresses of your EC2 instances.
+5. Create a CloudFront distribution: Create a CloudFront distribution that uses the origin server group you created in the previous step as the origin. Configure the distribution settings, such as the caching behavior, default TTLs, and any additional features you want to enable.
+6. Update your DNS records: Update your DNS records to point to the CloudFront distribution.
+Once you complete these steps, CloudFront will start distributing the content from your EC2 instances to end-users around the world, accelerating and improving the performance of content delivery. CloudFront can also cache the content at edge locations closer to the end-users, reducing the latency and improving the performance of content delivery.
+In summary, to use EC2 with CloudFront, you need to configure CloudFront to use your EC2 instances as the origin server, create a CloudFront distribution that uses the origin server group, and update your DNS records to point to the CloudFront distribution.
